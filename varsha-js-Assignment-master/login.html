@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<div id="showMe">
+	<h1>Email:</h1><span id="demo">	</span>
+	<h1>Firstname:</h1><span id="demo1"></span>
+	<h1>Lastname:</h1><span id="demo2"></span>
+	<h1>Address</h1><span id="demo3"></span>
+</div>
+<div id="ShowME11">
+<input type="txt" name="Email" placeholder="Email" id="Email"/>
+<input type="txt" name="Firstname" placeholder="Firstname" id="Firstname"/>
+<input type="txt" name="Lastname" placeholder="Lastname" id="Lastname"/>
+<input type="txt" name="Address" placeholder="Address" id="Address"/>
+<button type="button" onclick="myFunction()">Submit</button>
+</div>
+
+</body>
+<script>
+document.getElementById("showMe").style.display="none";
+function myFunction() {
+		var Email=document.getElementById("Email").value
+		var Firstname = document.getElementById("Firstname").value;
+		var Lastname = document.getElementById("Lastname").value;
+		var Address=document.getElementById("Address").value
+		if(Firstname === "" || Lastname === " "){
+    		alert("Please fill the form");
+		}
+		else 
+		{
+		document.getElementById("showMe").style.display="none";
+		document.getElementById("showMe").style.display="block";
+		document.getElementById("demo").innerHTML=Email;
+		document.getElementById("demo1").innerHTML=Firstname;
+		document.getElementById("demo2").innerHTML=Lastname;
+		document.getElementById("demo3").innerHTML=Address;
+		document.getElementById("ShowME11").style.display="none";
+    	}
+    }
+</script>
+</html>
